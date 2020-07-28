@@ -7,7 +7,6 @@ function ButtonLink(props) {
         href: "/"
     }
     */
-   console.log(props);
 
     return (
         <a className={props.className} href={props.href}>
