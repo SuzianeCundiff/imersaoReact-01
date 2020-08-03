@@ -8,19 +8,19 @@ import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
 
 // Desafio Master Blaster
-//const Pagina404 = () => ( <div> Página 404 </div> );
+// const Pagina404 = () => ( <div> Página 404 </div> );
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={Home} exact/>
-      <Route path="/cadastro/video" component={CadastroVideo} exact/>
-      <Route path="/cadastro/categoria" component={CadastroCategoria} exact/>
-      <Route 
-        component={ () => ( <div> Página 404 </div> ) } 
+      <Route path="/" component={Home} exact />
+      <Route path="/cadastro/video" component={CadastroVideo} exact />
+      <Route path="/cadastro/categoria" component={CadastroCategoria} exact />
+      <Route
+        component={() => (<div> Página 404 </div>)}
       />
     </Switch>
   </BrowserRouter>,
 
-  document.getElementById('root')
+  document.getElementById('root'),
 );
