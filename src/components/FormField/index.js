@@ -1,6 +1,9 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/default-props-match-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 const FormFieldWrapper = styled.div`
   position: relative;
@@ -64,62 +67,63 @@ const Input = styled.input`
 
   ${({ value }) => {
     const hasValue = value.length > 0;
-    
+
     return hasValue && css`
         &:not([type='color']) + ${Label.Text} {
           transform: scale(.6) translateY(-10px);
         }
       `;
-    }
   }
+}
 `;
 
+function FormField({
+  label, type, value, name, onChange,
+}) {
+  const fieldId = `id_${name}`;
 
-function FormField({ label, type, value, name, onChange }){
-  
-  const fieldId = `id_${ name }`;
- 
-  //se o type for igual a textarea então textarea senão input
+  // se o type for igual a textarea então textarea senão input
   const isTextArea = type === 'textarea';
   const tag = isTextArea ? 'textarea' : 'input';
 
   const hasValue = value.length;
 
   return (
-      <FormFieldWrapper>
-        <Label htmlFor={ fieldId } >
-          
-          <Input 
-            as = { tag }
-            id = { fieldId }
-            type = { type }
-            value = { value }
-            name = { name}
-            hasValue = { hasValue }
-            onChange = { onChange }
-          />
+    <FormFieldWrapper>
+      <Label htmlFor={fieldId}>
 
-          <Label.Text>
-            { label }: 
-          </Label.Text>
+        <Input
+          as={tag}
+          id={fieldId}
+          type={type}
+          value={value}
+          name={name}
+          hasValue={hasValue}
+          onChange={onChange}
+        />
 
-        </Label>
-      </FormFieldWrapper>
-  )
+        <Label.Text>
+          { label }
+          :
+        </Label.Text>
+
+      </Label>
+    </FormFieldWrapper>
+  );
 }
 
 FormField.defaultProps = {
   type: 'text',
   value: '',
-  onChange: () => {}
+  onChange: () => {},
 };
 
 FormField.propTypes = {
-  label: PropTypes.string.isRequired, 
-  type: PropTypes.string, 
-  value: PropTypes.string.isRequired, 
-  name: PropTypes.string, 
-  onChange: PropTypes.func
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  value: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default FormField;

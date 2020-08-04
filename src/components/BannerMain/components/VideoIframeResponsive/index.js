@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import { VideoContainer, ResponsiveIframe } from './styles';
