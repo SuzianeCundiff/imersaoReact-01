@@ -1,6 +1,8 @@
+/* eslint-disable linebreak-style */
 import styled from 'styled-components';
 
 export const ContentAreaContainer = styled.section`
+  padding-top: 2em;
   margin-left: 5%;
   margin-right: 5%;
   height: 100%;
@@ -18,6 +20,9 @@ export const ContentAreaContainer = styled.section`
 ContentAreaContainer.Item = styled.div`
   width: 50%;
   display: inline-block;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 8em;
   margin-bottom: 50px;
   @media (max-width: 800px) {
     width: 100%;
@@ -25,7 +30,7 @@ ContentAreaContainer.Item = styled.div`
 `;
 
 ContentAreaContainer.Category = styled.h1`
-  font-family: Roboto;
+  font-family: 'Press Start 2P', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 60px;
@@ -46,16 +51,20 @@ ContentAreaContainer.Category = styled.h1`
 `;
 
 ContentAreaContainer.Description = styled.p`
+  text-shadow: 0.15em 0.15em var(--black);
+  line-height: 1.5em;
+  
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
 ContentAreaContainer.Title = styled.h2`
-  font-style: normal;
+  font-family: 'Press Start 2P', cursive;
   font-weight: 300;
-  font-size: 40px;
-  line-height: 1;
+  font-size: 35px;
+  text-shadow: 0.15em 0.15em var(--black);
+  line-height: 1.2em;
   margin-top: 0;
   margin-bottom: 32px;
 
@@ -101,13 +110,13 @@ export const BannerMainContainer = styled.section`
 `;
 
 export const WatchButton = styled.button`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   outline: none;
   border-radius: 5px;
   text-decoration: none;

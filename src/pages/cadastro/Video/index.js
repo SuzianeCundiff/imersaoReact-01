@@ -1,17 +1,19 @@
+/* eslint-disable linebreak-style */
+
 import React from 'react';
-import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
+import PageDefault from '../../../components/PageDefault';
 
 function CadastroVideo() {
-    return (
-      <PageDefault>
-        <h1>Cadastro de Vídeo</h1>
+  return (
+    <PageDefault>
+      <h1>Cadastro de Vídeo</h1>
 
-        <Link to="/cadastro/categoria">
-          Cadastrar Categoria
-        </Link>
-      </PageDefault>
-    )
-  }
+      <Link to="/cadastro/categoria">
+        Cadastrar Categoria
+      </Link>
+    </PageDefault>
+  );
+}
 
-  export default CadastroVideo;
+export default CadastroVideo;
